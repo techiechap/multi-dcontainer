@@ -4,7 +4,7 @@ services:
 
 
 before_install:
-    - docker build -t ashishdhawal/docker-multi -f Dockerfile.dev ./client/Dockerfile.dev ./client
+  - docker build -t ashishdhawal/docker-multi -f Dockerfile.dev ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true ashishdhawal/docker-multi npm run test -- --coverage
