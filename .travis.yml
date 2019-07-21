@@ -22,3 +22,16 @@ after_success:
   - docker push ashishdhawal/doc-multi-server
   - docker push ashishdhawal/doc-multi-worker
 
+deploy:
+  provider: elastickbeanstalk
+  region: us-east-2
+  app: dock-multi
+  env: DockMulti-env
+  bucket_name: elasticbeanstalk-us-east-2-171912905752
+  bucket_path: dock-multi
+  on:
+    branch: master
+  access_key:  $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
+
