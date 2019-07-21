@@ -31,7 +31,8 @@ deploy:
   bucket_path: dock-multi
   on:
     branch: master
-  access_key:  $AWS_ACCESS_KEY
+  access_key:  
+    secure: $AWS_ACCESS_KEY
   secret_access_key:
-    secure: "$AWS_SECRET_KEY"
+    secure: $AWS_SECRET_KEY
 
