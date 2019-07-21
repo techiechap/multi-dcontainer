@@ -23,7 +23,7 @@ after_success:
   - docker push ashishdhawal/doc-multi-worker
 
 deploy:
-  provider: elastickbeanstalk
+  provider: elasticbeanstalk
   region: us-east-2
   app: dock-multi
   env: DockMulti-env
